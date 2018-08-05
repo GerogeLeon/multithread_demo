@@ -21,14 +21,17 @@ public class UnsafeCarPositionDemo {
 
         Runnable updatePosition = () -> {
             try {
+                //不断更新位置信息
                 for (int i = 0; i < 10; i++) {
                     int posVal = random.nextInt(100);
                     String id = "id" + i;
+
                     UnsafeCarPosition carPosition = locations.get(id);
                     if (carPosition == null) {
                         carPosition = new UnsafeCarPosition();
                         locations.put(id, carPosition);
                     }
+
                     //每次设置相同的值，预期始终x==y
                     carPosition.setX(posVal);
                     Thread.sleep(1);
@@ -43,6 +46,8 @@ public class UnsafeCarPositionDemo {
         for (int i = 0; i < 20; i++) {
             new Thread(updatePosition).start();
         }
+
+        //不断打印位置信息
         startPrinting();
 
 
