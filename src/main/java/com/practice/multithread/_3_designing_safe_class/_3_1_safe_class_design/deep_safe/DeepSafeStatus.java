@@ -1,6 +1,6 @@
-package com.practice.multithread._3_designing_safe_class._3_1_instance_closure.deep_safe;
+package com.practice.multithread._3_designing_safe_class._3_1_safe_class_design.deep_safe;
 
-import com.practice.multithread._3_designing_safe_class._3_1_instance_closure.SafeOneStatusByFinal;
+import com.practice.multithread._3_designing_safe_class._3_1_safe_class_design.SafeOneStatusByFinal;
 
 /**
  * @author Luo Bao Ding

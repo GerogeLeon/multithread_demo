@@ -1,4 +1,4 @@
-package com.practice.multithread._3_designing_safe_class._3_1_instance_closure;
+package com.practice.multithread._3_designing_safe_class._3_1_safe_class_design;
 
 import java.util.HashSet;
 
