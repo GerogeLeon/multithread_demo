@@ -1,4 +1,4 @@
-package com.practice.multithread._3_designing_safe_class._3_2_vehicle_tracker._3_2_2_delegating.domain;
+package com.practice.multithread._3_designing_safe_class._3_3_vehicle_tracker._3_2_2_delegating.domain;
 
 /**
  * safe

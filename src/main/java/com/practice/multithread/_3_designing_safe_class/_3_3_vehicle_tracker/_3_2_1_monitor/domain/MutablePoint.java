@@ -1,4 +1,4 @@
-package com.practice.multithread._3_designing_safe_class._3_2_vehicle_tracker._3_2_1_monitor.domain;
+package com.practice.multithread._3_designing_safe_class._3_3_vehicle_tracker._3_2_1_monitor.domain;
 
 /**
  * not safe. 可能出现点A(x1,y2),其中y2为另一个点的

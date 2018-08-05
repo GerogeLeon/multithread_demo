@@ -1,4 +1,4 @@
-package com.practice.multithread._3_designing_safe_class._3_3_add_method;
+package com.practice.multithread._3_designing_safe_class._3_2_add_method;
 
 import java.util.Vector;
 

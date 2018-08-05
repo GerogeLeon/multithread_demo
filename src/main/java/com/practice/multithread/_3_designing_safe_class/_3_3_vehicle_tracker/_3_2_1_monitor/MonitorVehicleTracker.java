@@ -1,6 +1,6 @@
-package com.practice.multithread._3_designing_safe_class._3_2_vehicle_tracker._3_2_1_monitor;
+package com.practice.multithread._3_designing_safe_class._3_3_vehicle_tracker._3_2_1_monitor;
 
-import com.practice.multithread._3_designing_safe_class._3_2_vehicle_tracker._3_2_1_monitor.domain.MutablePoint;
+import com.practice.multithread._3_designing_safe_class._3_3_vehicle_tracker._3_2_1_monitor.domain.MutablePoint;
 
 import java.util.HashMap;
 import java.util.Map;
