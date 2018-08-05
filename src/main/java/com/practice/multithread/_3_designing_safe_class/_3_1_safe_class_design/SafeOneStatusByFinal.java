@@ -1,8 +1,8 @@
 package com.practice.multithread._3_designing_safe_class._3_1_safe_class_design;
 
 /**
- * @author Luo Bao Ding
- * @since 2018/8/4
+ * 由于不可变，那么外部要设置新的状态则需要new一个新的对象
+ *
  */
 public class SafeOneStatusByFinal {
 

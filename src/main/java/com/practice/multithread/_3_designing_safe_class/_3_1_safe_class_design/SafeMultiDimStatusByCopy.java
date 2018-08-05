@@ -13,7 +13,7 @@ public class SafeMultiDimStatusByCopy {
     }
 
     /**
-     * synchronized, copy
+     * synchronized + copy
      */
     public synchronized int[] get() {
         return new int[]{x,y};

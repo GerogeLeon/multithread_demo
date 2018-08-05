@@ -3,14 +3,13 @@ package com.practice.multithread._3_designing_safe_class._3_1_safe_class_design.
 import com.practice.multithread._3_designing_safe_class._3_1_safe_class_design.SafeOneStatusByFinal;
 
 /**
- * @author Luo Bao Ding
- * @since 2018/8/5
+ * 通过递归嵌套安全类达到深安全
+ *
  */
-public class DeepSafeStatus {
+public class DeepSafeStatusByNesting {
     private final SafeOneStatusByFinal status;
 
-
-    public DeepSafeStatus(SafeOneStatusByFinal status) {
+    public DeepSafeStatusByNesting(SafeOneStatusByFinal status) {
         this.status = status;
     }
 
