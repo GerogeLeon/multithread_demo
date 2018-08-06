@@ -4,9 +4,9 @@ import java.util.Vector;
 
 /**
  * 一边迭代，一边修改，抛异常ConcurrentModificationException
+ * <p>fail-fast
  *
  * @author Luo Bao Ding
- * @since 2018/8/6
  */
 public class ConcurrentModificationExceptionProblemDemo {
     private Vector<String> vector = new Vector<>();
