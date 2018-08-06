@@ -1,4 +1,4 @@
-package com.practice.multithread._4_infrastructure._4_1_synchronized_container._4_1_1_problem_1;
+package com.practice.multithread._4_infrastructure._4_1_synchronized_container._4_1_1_compound_operation;
 
 import java.util.Vector;
 

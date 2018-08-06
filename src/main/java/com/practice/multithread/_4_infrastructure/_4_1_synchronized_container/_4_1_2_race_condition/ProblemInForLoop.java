@@ -1,4 +1,4 @@
-package com.practice.multithread._4_infrastructure._4_1_synchronized_container._4_1_2_problem_2;
+package com.practice.multithread._4_infrastructure._4_1_synchronized_container._4_1_2_race_condition;
 
 import java.util.Vector;
 

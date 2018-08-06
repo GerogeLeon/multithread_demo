@@ -8,7 +8,6 @@ import java.util.Vector;
  */
 public class ImplicitUsingIteratorDemo {
 
-
     public void unsafe(Vector vector) {
         System.out.println("vector = [" + vector + "]");//隐含使用了迭代器,潜在ConcurrentModificationException
     }
