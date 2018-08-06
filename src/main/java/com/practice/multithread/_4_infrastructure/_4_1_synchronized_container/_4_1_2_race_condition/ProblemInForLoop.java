@@ -9,8 +9,7 @@ import java.util.Vector;
 public class ProblemInForLoop {
 
     public void unsafe(Vector vector) {
-        for (int i = 0; i < vector.size(); i++) {
-
+        for (int i = 0; i < vector.size(); i++) {//竞态条件
             Object item = vector.get(i);
             //...
         }
