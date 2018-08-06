@@ -9,7 +9,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 
 /**
- * 只锁住了一处，读
+ * 只锁住了一处：读
  *
  * @author Luo Bao Ding
  * @since 2018/8/5
