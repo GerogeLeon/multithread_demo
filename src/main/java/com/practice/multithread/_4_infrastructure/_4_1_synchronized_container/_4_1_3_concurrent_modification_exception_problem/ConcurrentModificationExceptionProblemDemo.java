@@ -1,0 +1,65 @@
+package com.practice.multithread._4_infrastructure._4_1_synchronized_container._4_1_3_concurrent_modification_exception_problem;
+
+import java.util.Vector;
+
+/**
+ * 一边迭代，一边修改，抛异常ConcurrentModificationException
+ *
+ * @author Luo Bao Ding
+ * @since 2018/8/6
+ */
+public class ConcurrentModificationExceptionProblemDemo {
+    private Vector<String> vector = new Vector<>();
+
+    {
+        init();
+    }
+
+    private void init() {
+        for (int i = 0; i < 100; i++) {
+            vector.add("a" + i);
+        }
+    }
+
+    public void demo() {
+        runIterating();
+
+        runModifying();
+
+    }
+
+    /**
+     * 迭代vector
+     */
+    private void runIterating() {
+        Runnable iterateRunnable = () -> {
+            for (String item : vector) {
+                System.out.println("item = " + item);
+            }
+        };
+        for (int i = 0; i < 10; i++) {
+            new Thread(iterateRunnable).start();
+        }
+    }
+
+    /**
+     * 修改vector
+     */
+    private void runModifying() {
+        Runnable modifyRunnable = () -> {
+            for (int i = 0; i <10; i++) {
+                vector.add("b"+i);
+            }
+        };
+
+        for (int i = 0; i < 10; i++) {
+            new Thread(modifyRunnable).start();
+        }
+    }
+
+    public static void main(String[] args) {
+        new ConcurrentModificationExceptionProblemDemo().demo();
+    }
+
+
+}
