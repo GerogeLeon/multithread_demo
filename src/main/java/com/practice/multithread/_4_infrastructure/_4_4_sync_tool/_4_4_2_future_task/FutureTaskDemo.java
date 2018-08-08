@@ -1,4 +1,4 @@
-package com.practice.multithread._4_infrastructure._4_2_concurrent_container._4_2_5_future_task;
+package com.practice.multithread._4_infrastructure._4_4_sync_tool._4_4_2_future_task;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;

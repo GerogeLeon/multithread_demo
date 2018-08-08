@@ -1,4 +1,4 @@
-package com.practice.multithread._4_infrastructure._4_2_concurrent_container._4_2_3_blocking_queue;
+package com.practice.multithread._4_infrastructure._4_3_blocking_queue._4_3_1_blocking_queue;
 
 public class Message {
     private String msg;

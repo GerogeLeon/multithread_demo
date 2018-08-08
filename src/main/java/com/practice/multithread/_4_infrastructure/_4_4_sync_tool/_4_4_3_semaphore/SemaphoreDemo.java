@@ -1,4 +1,4 @@
-package com.practice.multithread._4_infrastructure._4_2_concurrent_container._4_2_6_semaphore;
+package com.practice.multithread._4_infrastructure._4_4_sync_tool._4_4_3_semaphore;
 
 import java.util.concurrent.Semaphore;
 

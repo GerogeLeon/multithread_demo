@@ -1,4 +1,4 @@
-package com.practice.multithread._4_infrastructure._4_2_concurrent_container._4_2_7_cyclic_barrier;
+package com.practice.multithread._4_infrastructure._4_4_sync_tool._4_4_4_cyclic_barrier;
 
 import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;
