@@ -16,7 +16,7 @@ public class FutureTaskDemo {
         Callable<String> restaurantService=()->{
             System.out.println("大盘鸡已做好，开始派送");
             System.out.println("派送中。。。");
-            Thread.sleep(10);
+            Thread.sleep(2000);
             return "大盘鸡";
         };
         FutureTask<String> order = new FutureTask<>(restaurantService);
@@ -30,7 +30,7 @@ public class FutureTaskDemo {
         } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();
         }
-        System.out.println("收到：" + food);
+        System.out.println("收到" + food);
 
     }
 
