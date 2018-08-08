@@ -1,9 +1,8 @@
-package com.practice.multithread._4_infrastructure._4_2_concurrent_container.CopyOnWriteList;
+package com.practice.multithread._4_infrastructure._4_2_concurrent_container._4_2_2_copy_on_write_list;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
 
 public class ConcurrentListExample {
 

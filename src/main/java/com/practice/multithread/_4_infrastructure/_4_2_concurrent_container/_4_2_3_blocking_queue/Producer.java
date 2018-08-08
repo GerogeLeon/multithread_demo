@@ -1,4 +1,4 @@
-package com.practice.multithread._4_infrastructure._4_2_concurrent_container.BlockingQueue;
+package com.practice.multithread._4_infrastructure._4_2_concurrent_container._4_2_3_blocking_queue;
 
 import java.util.concurrent.BlockingQueue;
 

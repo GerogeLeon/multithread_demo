@@ -1,4 +1,4 @@
-package com.practice.multithread._4_infrastructure._4_2_concurrent_container.CountDownLatch;
+package com.practice.multithread._4_infrastructure._4_2_concurrent_container._4_2_4_count_down_latch;
 
 import java.util.concurrent.CountDownLatch;
 

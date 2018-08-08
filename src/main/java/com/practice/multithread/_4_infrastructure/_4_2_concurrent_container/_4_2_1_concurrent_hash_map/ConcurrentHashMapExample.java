@@ -1,9 +1,8 @@
-package com.practice.multithread._4_infrastructure._4_2_concurrent_container.ConcurrentHashMap;
+package com.practice.multithread._4_infrastructure._4_2_concurrent_container._4_2_1_concurrent_hash_map;
 
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
 
 public class ConcurrentHashMapExample {
 
