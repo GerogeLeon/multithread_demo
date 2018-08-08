@@ -22,9 +22,7 @@ public class FutureTaskDemo {
         FutureTask<String> order = new FutureTask<>(restaurantService);
 
         System.out.println("开始下单");
-
         new Thread(order).start();
-
         System.out.println("下单成功");
         String food = null;
         try {
