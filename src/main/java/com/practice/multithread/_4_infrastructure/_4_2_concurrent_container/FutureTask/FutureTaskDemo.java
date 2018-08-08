@@ -5,7 +5,7 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.FutureTask;
 
 /**
- * 点大盘鸡外派，然后等大盘鸡
+ * 点大盘鸡外卖，然后等大盘鸡
  *
  * @author Luo Bao Ding
  */
