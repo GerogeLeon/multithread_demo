@@ -15,7 +15,7 @@ public class FutureTaskDemo {
         //饭店外卖服务
         Callable<String> restaurantService=()->{
             System.out.println("大盘鸡已做好，开始派送");
-            System.out.println("派送中。。。");
+            System.out.println("派送中。。。。。。。。");
             Thread.sleep(2000);
             return "大盘鸡";
         };
