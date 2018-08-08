@@ -1,7 +1,10 @@
 package com.practice.multithread._4_infrastructure._4_2_concurrent_container.CountDownLatch;
 
 import java.util.concurrent.CountDownLatch;
- 
+
+/**
+ * 一家四口，来客人时匆忙打扫卫生，通过分工打扫，都打扫完了才开门
+ */
 public class CountDownLatchDemo
 {
     public static void main(String args[]) 
@@ -14,13 +17,13 @@ public class CountDownLatchDemo
         // Let us create four worker 
         // threads and start them.
         Worker first = new Worker(1000, latch, 
-                                  "WORKER-1");
-        Worker second = new Worker(2000, latch, 
-                                  "WORKER-2");
-        Worker third = new Worker(3000, latch, 
-                                  "WORKER-3");
-        Worker fourth = new Worker(4000, latch, 
-                                  "WORKER-4");
+                                  "爸爸");
+        Worker second = new Worker(2000, latch,
+                                  "妈妈");
+        Worker third = new Worker(3000, latch,
+                                  "儿子");
+        Worker fourth = new Worker(4000, latch,
+                                  "女儿");
         first.start();
         second.start();
         third.start();
@@ -30,8 +33,7 @@ public class CountDownLatchDemo
         latch.await();
  
         // Main thread has started
-        System.out.println(Thread.currentThread().getName() +
-                           " has finished");
+        System.out.println("开门让客人进来！");
     }
 }
  
@@ -58,7 +60,7 @@ class Worker extends Thread
             Thread.sleep(delay);
             latch.countDown();
             System.out.println(Thread.currentThread().getName()
-                            + " finished");
+                            + "打扫完了");
         }
         catch (InterruptedException e)
         {
