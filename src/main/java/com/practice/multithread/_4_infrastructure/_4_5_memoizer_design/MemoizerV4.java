@@ -32,7 +32,7 @@ public class MemoizerV4<A, V> implements Computable<A, V> {
             }
             try {
                 result = futureResult.get();
-            } catch (ExecutionException e) {
+            } catch (ExecutionException e) {//异常处理不健全
                 cache.remove(arg, futureResult);
                 throw new RuntimeException(e);
             }
