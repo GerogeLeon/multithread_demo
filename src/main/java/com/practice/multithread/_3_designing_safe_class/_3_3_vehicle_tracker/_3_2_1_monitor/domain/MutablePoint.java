@@ -14,6 +14,11 @@ public class MutablePoint {
         this.y = 0;
     }
 
+    public MutablePoint(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+
     public MutablePoint(MutablePoint point) {
         this.x = point.x;
         this.y = point.y;

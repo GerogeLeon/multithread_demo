@@ -15,9 +15,10 @@ import java.util.concurrent.ConcurrentHashMap;
  * @since 2018/8/4
  */
 public class DelegatingVehicleTracker {
-    /** ConcurrentHashMap支持并发读写， 所以getLocation与setLocation都要使用这个
+    /**
+     * ConcurrentHashMap支持并发读写， 所以getLocation与setLocation都要使用这个
      * 其中String与ImmutablePoint都是不可变的
-     * */
+     */
     private final ConcurrentHashMap<String, ImmutablePoint> locations;
     private final Map<String, ImmutablePoint> unmodifiableMap;
 
@@ -36,7 +37,7 @@ public class DelegatingVehicleTracker {
 
     public void setLocation(String id, int x, int y) {
         if (locations.replace(id, new ImmutablePoint(x, y)) == null) {
-            throw new IllegalArgumentException("No such ID: " + id);
+            locations.putIfAbsent(id, new ImmutablePoint(x, y));
         }
     }
 

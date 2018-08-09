@@ -53,7 +53,8 @@ public class MonitorVehicleTracker {
     public synchronized void setLocation(String id, int x, int y) {
         MutablePoint point = locations.get(id);
         if (point == null) {
-            throw new IllegalArgumentException("No such ID: " + id);
+            locations.put(id, new MutablePoint(x, y));
+            return;
         }
         point.x = x;
         point.y = y;

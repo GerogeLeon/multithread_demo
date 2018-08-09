@@ -32,7 +32,8 @@ public class MonitorDomainVehicleTracker {
 
     public void setLocation(String id, int x, int y) {
         if (!locations.containsKey(id)) {
-            throw new IllegalArgumentException("No such ID: " + id);
+            locations.putIfAbsent(id, new MonitorPoint(x, y));
+            return;
         }
         locations.get(id).set(x, y);
 
