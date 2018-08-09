@@ -6,18 +6,20 @@ import java.util.Vector;
  * @author Luo Bao Ding
  * @since 2018/8/6
  */
-public class ProblemInForLoop {
+public class SolvingProblemInForLoopDemo {
 
-    private static final int SIZE = 50;
+    public static final int SIZE = 50;
 
     private void unsafeLoop(Vector vector) {
         try {
-            for (int i = vector.size() - 1; i >= 0 && vector.size() > 0; i--) {//竞态条件
-                Thread.sleep(4);
-                Object item = vector.get(i);
-                System.out.println(Thread.currentThread().getName() + ": item = " + item);
+            synchronized (vector) {
+                for (int i = vector.size() - 1; i >= 0 && vector.size() > 0; i--) {//竞态条件
+                    Thread.sleep(10);
+                    Object item = vector.get(i);
+                    System.out.println(Thread.currentThread().getName()+": item = " + item);
+                }
             }
-        } catch (Exception e) {
+        } catch (InterruptedException e) {
             e.printStackTrace();
         }
 
@@ -53,10 +55,12 @@ public class ProblemInForLoop {
 
     private void remove(Vector<String> vector) {
         try {
-            for (int i = 0; i < vector.size(); i++) {
-                vector.remove(i);
-                Thread.sleep(1);
+            synchronized (vector) {
+                for (int i = 0; i < vector.size(); i++) {
+                    vector.remove(i);
+                    Thread.sleep(1);
 
+                }
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -64,7 +68,7 @@ public class ProblemInForLoop {
     }
 
     public static void main(String[] args) {
-        new ProblemInForLoop().demo();
+        new SolvingProblemInForLoopDemo().demo();
     }
 
 }
