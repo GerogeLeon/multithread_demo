@@ -12,7 +12,7 @@ import java.util.concurrent.ConcurrentHashMap;
  * 委托安全容器ConcurrentHashMap+不变基元ImmutablePoint
  *
  * @author Luo Bao Ding
- * @since 2018/8/4
+ *
  */
 public class DelegatingVehicleTracker {
     /**

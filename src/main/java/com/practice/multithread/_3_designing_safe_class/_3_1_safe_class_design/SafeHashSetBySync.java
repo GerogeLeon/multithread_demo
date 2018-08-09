@@ -11,7 +11,7 @@ import java.util.HashSet;
  * </p>
  *
  * @author Luo Bao Ding
- * @since 2018/8/4
+ *
  */
 public class SafeHashSetBySync {
 

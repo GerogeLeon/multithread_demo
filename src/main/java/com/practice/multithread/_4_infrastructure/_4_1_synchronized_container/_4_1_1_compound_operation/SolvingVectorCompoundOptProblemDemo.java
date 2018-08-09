@@ -7,7 +7,7 @@ import java.util.Vector;
  * 出现ArrayIndexOutOfBoundsException
  *</p>
  * @author Luo Bao Ding
- * @since 2018/8/6
+ *
  */
 public class SolvingVectorCompoundOptProblemDemo {
 

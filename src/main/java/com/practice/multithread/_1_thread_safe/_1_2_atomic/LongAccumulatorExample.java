@@ -10,7 +10,7 @@ import static org.junit.Assert.assertEquals;
 
 /**
  * @author Luo Bao Ding
- * @since 2018/8/9
+ *
  */
 public class LongAccumulatorExample {
     public static void main(String[] args) {

@@ -6,7 +6,7 @@ import com.practice.multithread._1_thread_safe._1_4_immutable.domain.MutableLast
  * 加锁防窜改来保证线程安全
  *
  * @author Luo Bao Ding
- * @since 2018/8/3
+ *
  */
 public class SafeMutableDemo {
     private volatile MutableLastLeavingPerson lastLeavingPerson;

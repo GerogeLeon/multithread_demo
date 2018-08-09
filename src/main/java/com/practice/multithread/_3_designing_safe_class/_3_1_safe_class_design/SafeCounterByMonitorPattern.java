@@ -4,7 +4,7 @@ package com.practice.multithread._3_designing_safe_class._3_1_safe_class_design;
  * 监视器模式
  *
  * @author Luo Bao Ding
- * @since 2018/8/4
+ *
  */
 public class SafeCounterByMonitorPattern {
     private Integer count = 0;

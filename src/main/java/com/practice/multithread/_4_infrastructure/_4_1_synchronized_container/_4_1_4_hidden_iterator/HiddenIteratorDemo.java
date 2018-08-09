@@ -7,7 +7,7 @@ import java.util.List;
  * 隐藏使用迭代器：集合的toString, 类似的还有集合的equals, hashcode, containsAll, removeAll等方法
  *
  * @author Luo Bao Ding
- * @since 2018/8/6
+ *
  */
 public class HiddenIteratorDemo {
 

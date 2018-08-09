@@ -2,7 +2,7 @@ package com.practice.multithread._1_thread_safe._1_1_demo._1_1_1_one_val;
 
 /**
  * @author Luo Bao Ding
- * @since 2018/8/9
+ *
  */
 public class MonitorReenterDemo {
     int count = 0;

@@ -5,7 +5,7 @@ import java.util.Vector;
 /**
  *
  * @author Luo Bao Ding
- * @since 2018/8/6
+ *
  */
 public class SolvingConcurrentModificationExceptionProblemDemo {
     private Vector<String> vector = new Vector<>();
