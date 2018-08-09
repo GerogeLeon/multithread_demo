@@ -9,8 +9,15 @@ import java.util.concurrent.Future;
 import java.util.concurrent.FutureTask;
 
 /**
- * 官方版：
+ * 官方版：<p>
  * org.apache.commons.lang3.concurrent.Memoizer
+ * <pre>{@code
+ * <dependency>
+ *     <groupId>org.apache.commons</groupId>
+ *     <artifactId>commons-lang3</artifactId>
+ *     <version>3.7</version>
+ * </dependency>
+ * }</pre>
  *
  * @param <A> 入参
  * @param <V> 结果
