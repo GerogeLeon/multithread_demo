@@ -1,29 +1,20 @@
-package com.practice.multithread._2_objets_sharing._2_3_immutable;
+package com.practice.multithread._1_thread_safe._1_4_immutable;
 
-import com.practice.multithread._2_objets_sharing._2_3_immutable.domain.MutableLastLeavingPerson;
+import com.practice.multithread._1_thread_safe._1_4_immutable.domain.ImmutableLastLeavingPerson;
 
 /**
- * 功能：记录最后打卡时间。
- *
- * 分析：有窜改机会
+ * 借助volatile不变容器实现无锁化
  *
  * @author Luo Bao Ding
  */
-public class UnsafeMutableDemo {
-    private volatile MutableLastLeavingPerson lastLeavingPerson;
+public class SafeImmutableDemo {
+    private volatile ImmutableLastLeavingPerson lastLeavingPerson;
 
     {
-        lastLeavingPerson = new MutableLastLeavingPerson();
-        lastLeavingPerson.setName("");
-        lastLeavingPerson.setLeavingTime(-1);
-
+        lastLeavingPerson = new ImmutableLastLeavingPerson("",-1);
     }
 
-    /***
-     * 不断地打卡
-     */
     class MyThread extends Thread {
-
 
         private final int time;
 
@@ -95,9 +86,7 @@ public class UnsafeMutableDemo {
     private void updateLastLeavingPerson(String name, Integer time) {
         try {
             if (time > lastLeavingPerson.getLeavingTime()) {
-                lastLeavingPerson.setName(name);
-                Thread.sleep(10);
-                lastLeavingPerson.setLeavingTime(time);
+                lastLeavingPerson=new ImmutableLastLeavingPerson(name,time);
                 Thread.sleep(10);
 
             }
@@ -111,6 +100,6 @@ public class UnsafeMutableDemo {
     }
 
     public static void main(String[] args) {
-        new UnsafeMutableDemo().demo();
+        new SafeImmutableDemo().demo();
     }
 }

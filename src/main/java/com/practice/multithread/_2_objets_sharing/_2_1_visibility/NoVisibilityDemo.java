@@ -7,6 +7,9 @@ public class NoVisibilityDemo {
     private static boolean ready = false;
     private static int number = 0;
 
+    /**
+     * 读线程，当ready为true则停止循环，然后打印number值
+     */
     private static class ReaderThread extends Thread {
         @Override
         public void run() {

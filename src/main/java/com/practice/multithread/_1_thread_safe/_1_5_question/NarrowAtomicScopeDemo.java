@@ -1,7 +1,7 @@
-package com.practice.multithread._1_thread_safe._1_3_question;
+package com.practice.multithread._1_thread_safe._1_5_question;
 
 
-import com.practice.multithread._1_thread_safe._1_3_question.domain.AtomicSequence;
+import com.practice.multithread._1_thread_safe._1_5_question.domain.AtomicSequence;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

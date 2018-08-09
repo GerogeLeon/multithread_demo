@@ -7,7 +7,7 @@ import com.practice.multithread._3_designing_safe_class._3_1_safe_class_design.S
  *
  */
 public class DeepSafeStatusByNesting {
-    private final SafeOneStatusByFinal status;
+    private final SafeOneStatusByFinal status;//lkm：final + safe type
 
     public DeepSafeStatusByNesting(SafeOneStatusByFinal status) {
         this.status = status;

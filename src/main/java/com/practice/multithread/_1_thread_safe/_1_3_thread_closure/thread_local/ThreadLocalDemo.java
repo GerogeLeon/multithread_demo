@@ -1,4 +1,4 @@
-package com.practice.multithread._2_objets_sharing._2_2_thread_closure.thread_local;
+package com.practice.multithread._1_thread_safe._1_3_thread_closure.thread_local;
 
 /**
  * 对比： {@link UnsafeContrastForThreadLocal }， {@link UnsafeContrastForThreadLocal2}

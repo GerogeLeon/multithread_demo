@@ -1,4 +1,4 @@
-package com.practice.multithread._1_thread_safe._1_3_question.domain;
+package com.practice.multithread._1_thread_safe._1_5_question.domain;
 
 import java.util.concurrent.atomic.AtomicInteger;
 

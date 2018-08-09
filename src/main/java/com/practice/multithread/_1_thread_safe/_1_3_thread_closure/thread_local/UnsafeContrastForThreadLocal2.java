@@ -1,24 +1,26 @@
-package com.practice.multithread._2_objets_sharing._2_2_thread_closure.thread_local.threadLocal_principle;
+package com.practice.multithread._1_thread_safe._1_3_thread_closure.thread_local;
+
+import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * @author Luo Bao Ding
  */
-public class MyThreadLocalDemo {
-    private MyThreadLocal<Integer> integerThreadLocal = new MyThreadLocal<>();
+public class UnsafeContrastForThreadLocal2 {
+    private AtomicInteger val=new AtomicInteger(0);
 
     public void demo() {
         Runnable runnable = () -> {
             try {
                 for (int i = 0; i < 20; i++) {
-                    integerThreadLocal.set(1);
+                    val.incrementAndGet();
 
                     Thread.sleep(10);
 
-                    integerThreadLocal.set(0);
-
+                    val.decrementAndGet();
                     Thread.sleep(10);
 
-                    System.out.println("val=" + integerThreadLocal.get());
+
+                    System.out.println("val=" + val.get());
 
                 }
             } catch (InterruptedException e) {
@@ -32,7 +34,7 @@ public class MyThreadLocalDemo {
     }
 
     public static void main(String[] args) {
-        new MyThreadLocalDemo().demo();
+        new UnsafeContrastForThreadLocal2().demo();
 
     }
 }

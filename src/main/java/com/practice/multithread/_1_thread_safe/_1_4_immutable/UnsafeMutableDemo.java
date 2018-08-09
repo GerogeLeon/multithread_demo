@@ -1,17 +1,16 @@
-package com.practice.multithread._2_objets_sharing._2_3_immutable;
+package com.practice.multithread._1_thread_safe._1_4_immutable;
 
-import com.practice.multithread._2_objets_sharing._2_3_immutable.domain.MutableLastLeavingPerson;
+import com.practice.multithread._1_thread_safe._1_4_immutable.domain.MutableLastLeavingPerson;
 
 /**
- * 加锁防窜改来保证线程安全
+ * 功能：记录最后打卡时间。
+ *
+ * 分析：有窜改机会
  *
  * @author Luo Bao Ding
- * @since 2018/8/3
  */
-public class SafeMutableDemo {
+public class UnsafeMutableDemo {
     private volatile MutableLastLeavingPerson lastLeavingPerson;
-
-    private final Object lock = new Object();
 
     {
         lastLeavingPerson = new MutableLastLeavingPerson();
@@ -20,6 +19,9 @@ public class SafeMutableDemo {
 
     }
 
+    /***
+     * 不断地打卡
+     */
     class MyThread extends Thread {
 
 
@@ -67,6 +69,7 @@ public class SafeMutableDemo {
         }
 
     }
+
     /**
      * 不断的打印最新最后走的人
      */
@@ -91,14 +94,12 @@ public class SafeMutableDemo {
 
     private void updateLastLeavingPerson(String name, Integer time) {
         try {
-            synchronized (lock) {
-                if (time > lastLeavingPerson.getLeavingTime()) {
-                    lastLeavingPerson.setName(name);
-                    Thread.sleep(10);
-                    lastLeavingPerson.setLeavingTime(time);
-                    Thread.sleep(10);
+            if (time > lastLeavingPerson.getLeavingTime()) {
+                lastLeavingPerson.setName(name);
+                Thread.sleep(10);
+                lastLeavingPerson.setLeavingTime(time);
+                Thread.sleep(10);
 
-                }
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -106,12 +107,10 @@ public class SafeMutableDemo {
     }
 
     private void printLastLeavingPerson() {
-        synchronized (lock) {
-            System.out.println(lastLeavingPerson.toString());
-        }
+        System.out.println(lastLeavingPerson.toString());
     }
 
     public static void main(String[] args) {
-        new SafeMutableDemo().demo();
+        new UnsafeMutableDemo().demo();
     }
 }

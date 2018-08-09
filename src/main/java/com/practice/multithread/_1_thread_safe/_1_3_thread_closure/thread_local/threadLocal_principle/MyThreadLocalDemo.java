@@ -1,24 +1,24 @@
-package com.practice.multithread._2_objets_sharing._2_2_thread_closure.thread_local;
+package com.practice.multithread._1_thread_safe._1_3_thread_closure.thread_local.threadLocal_principle;
 
 /**
  * @author Luo Bao Ding
  */
-public class UnsafeContrastForThreadLocal {
-    private volatile int val;
+public class MyThreadLocalDemo {
+    private MyThreadLocal<Integer> integerThreadLocal = new MyThreadLocal<>();
 
     public void demo() {
         Runnable runnable = () -> {
             try {
                 for (int i = 0; i < 20; i++) {
-                    val = 1;
+                    integerThreadLocal.set(1);
 
                     Thread.sleep(10);
 
-                    val = 0;
+                    integerThreadLocal.set(0);
+
                     Thread.sleep(10);
 
-
-                    System.out.println("val=" + val);
+                    System.out.println("val=" + integerThreadLocal.get());
 
                 }
             } catch (InterruptedException e) {
@@ -32,7 +32,7 @@ public class UnsafeContrastForThreadLocal {
     }
 
     public static void main(String[] args) {
-        new UnsafeContrastForThreadLocal().demo();
+        new MyThreadLocalDemo().demo();
 
     }
 }

@@ -1,4 +1,4 @@
-package com.practice.multithread._2_objets_sharing._2_2_thread_closure.local_val;
+package com.practice.multithread._1_thread_safe._1_3_thread_closure.local_val;
 
 import com.practice.multithread._1_thread_safe._1_1_demo._1_1_1_one_val.UnsafeDemo;
 import com.practice.multithread._1_thread_safe._1_1_demo._1_1_1_one_val.domain.UnsafeSequence;

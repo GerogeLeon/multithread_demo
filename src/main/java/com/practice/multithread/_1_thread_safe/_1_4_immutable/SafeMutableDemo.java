@@ -1,20 +1,27 @@
-package com.practice.multithread._2_objets_sharing._2_3_immutable;
+package com.practice.multithread._1_thread_safe._1_4_immutable;
 
-import com.practice.multithread._2_objets_sharing._2_3_immutable.domain.ImmutableLastLeavingPerson;
+import com.practice.multithread._1_thread_safe._1_4_immutable.domain.MutableLastLeavingPerson;
 
 /**
- * 借助volatile不变容器实现无锁化
+ * 加锁防窜改来保证线程安全
  *
  * @author Luo Bao Ding
+ * @since 2018/8/3
  */
-public class SafeImmutableDemo {
-    private volatile ImmutableLastLeavingPerson lastLeavingPerson;
+public class SafeMutableDemo {
+    private volatile MutableLastLeavingPerson lastLeavingPerson;
+
+    private final Object lock = new Object();
 
     {
-        lastLeavingPerson = new ImmutableLastLeavingPerson("",-1);
+        lastLeavingPerson = new MutableLastLeavingPerson();
+        lastLeavingPerson.setName("");
+        lastLeavingPerson.setLeavingTime(-1);
+
     }
 
     class MyThread extends Thread {
+
 
         private final int time;
 
@@ -60,7 +67,6 @@ public class SafeImmutableDemo {
         }
 
     }
-
     /**
      * 不断的打印最新最后走的人
      */
@@ -85,10 +91,14 @@ public class SafeImmutableDemo {
 
     private void updateLastLeavingPerson(String name, Integer time) {
         try {
-            if (time > lastLeavingPerson.getLeavingTime()) {
-                lastLeavingPerson=new ImmutableLastLeavingPerson(name,time);
-                Thread.sleep(10);
+            synchronized (lock) {
+                if (time > lastLeavingPerson.getLeavingTime()) {
+                    lastLeavingPerson.setName(name);
+                    Thread.sleep(10);
+                    lastLeavingPerson.setLeavingTime(time);
+                    Thread.sleep(10);
 
+                }
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -96,10 +106,12 @@ public class SafeImmutableDemo {
     }
 
     private void printLastLeavingPerson() {
-        System.out.println(lastLeavingPerson.toString());
+        synchronized (lock) {
+            System.out.println(lastLeavingPerson.toString());
+        }
     }
 
     public static void main(String[] args) {
-        new SafeImmutableDemo().demo();
+        new SafeMutableDemo().demo();
     }
 }
