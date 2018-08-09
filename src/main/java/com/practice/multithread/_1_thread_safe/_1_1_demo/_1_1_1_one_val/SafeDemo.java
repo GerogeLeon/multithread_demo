@@ -13,9 +13,9 @@ public class SafeDemo {
     public static void main(String[] args) {
         UnsafeSequence unsafeSequence = new UnsafeSequence();
         Runnable runnable = () -> {
-            synchronized (unsafeSequence) {
-                try {
-                    for (int j = 0; j < 10; j++) {
+            try {
+                for (int j = 0; j < 10; j++) {
+                    synchronized (unsafeSequence) {
                         unsafeSequence.incr();
                         Thread.sleep(1);
 
@@ -24,9 +24,9 @@ public class SafeDemo {
                         System.out.println(Thread.currentThread().getName() + ": val = " + unsafeSequence.getValue());
 
                     }
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
                 }
+            } catch (InterruptedException e) {
+                e.printStackTrace();
             }
 
         };
