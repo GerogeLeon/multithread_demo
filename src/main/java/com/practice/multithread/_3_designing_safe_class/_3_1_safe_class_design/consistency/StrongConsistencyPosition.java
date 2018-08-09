@@ -3,7 +3,7 @@ package com.practice.multithread._3_designing_safe_class._3_1_safe_class_design.
 /**
  * 地理坐标x,y
  *
- * @author Luo Bao Ding
+ *
  */
 public class StrongConsistencyPosition {
 

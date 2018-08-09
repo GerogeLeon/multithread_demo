@@ -5,7 +5,7 @@ import java.util.concurrent.Semaphore;
 /**
  * 场景：某花园参观需要许可证，总共10个许可证，共50人来参观
  *
- * @author Luo Bao Ding
+ *
  */
 public class SemaphoreDemo {
 

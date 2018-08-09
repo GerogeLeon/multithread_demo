@@ -9,7 +9,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 
 /**
- * @author Luo Bao Ding
+ *
  */
 public class UnsafeCarPositionDemo {
     private ConcurrentHashMap<String, UnsafeCarPosition> locations = new ConcurrentHashMap<>();

@@ -3,7 +3,7 @@ package com.practice.multithread._1_thread_safe._1_4_immutable.domain;
 /**
  * 可变容器
  *
- * @author Luo Bao Ding
+ *
  *
  */
 public class MutableLastLeavingPerson {

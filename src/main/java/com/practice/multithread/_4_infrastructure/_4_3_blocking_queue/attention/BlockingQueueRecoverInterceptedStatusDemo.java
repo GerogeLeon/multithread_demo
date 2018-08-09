@@ -7,7 +7,7 @@ import java.util.concurrent.LinkedBlockingQueue;
 /**
  * 恢复中断
  *
- * @author Luo Bao Ding
+ *
  */
 public class BlockingQueueRecoverInterceptedStatusDemo {
 

@@ -9,7 +9,7 @@ import java.util.stream.IntStream;
 import static org.junit.Assert.assertEquals;
 
 /**
- * @author Luo Bao Ding
+ *
  *
  */
 public class LongAccumulatorExample {

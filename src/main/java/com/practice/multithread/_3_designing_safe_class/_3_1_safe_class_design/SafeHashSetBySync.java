@@ -10,7 +10,7 @@ import java.util.HashSet;
  *     {@link java.util.Collections.SynchronizedCollection#add(java.lang.Object)}
  * </p>
  *
- * @author Luo Bao Ding
+ *
  *
  */
 public class SafeHashSetBySync {

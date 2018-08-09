@@ -9,7 +9,7 @@ import java.util.concurrent.FutureTask;
 /**
  * 比较完美版。可改进处：健全异常处理
  *
- * @author Luo Bao Ding
+ *
  */
 public class MemoizerV4<A, V> implements Computable<A, V> {
     private final Map<A, FutureTask<V>> cache = new ConcurrentHashMap<>();

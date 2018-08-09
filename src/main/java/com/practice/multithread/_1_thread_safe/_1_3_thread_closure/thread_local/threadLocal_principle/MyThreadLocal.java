@@ -6,7 +6,7 @@ import java.util.Map;
 /**
  * 模拟一个ThreadLocal
  *
- * @author Luo Bao Ding
+ *
  */
 public class MyThreadLocal<T> {
 

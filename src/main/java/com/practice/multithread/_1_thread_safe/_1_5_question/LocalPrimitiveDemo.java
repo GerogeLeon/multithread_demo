@@ -1,7 +1,7 @@
 package com.practice.multithread._1_thread_safe._1_5_question;
 
 /**
- * @author Luo Bao Ding
+ *
  *
  */
 public class LocalPrimitiveDemo {

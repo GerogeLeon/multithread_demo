@@ -8,7 +8,7 @@ import java.util.concurrent.FutureTask;
 /**
  * 有设计缺陷，不能降低重复计算
  *
- * @author Luo Bao Ding
+ *
  */
 public class MemoizerV3_2<A, V> implements Computable<A, V> {
     private final Map<A, FutureTask<V>> cache = new ConcurrentHashMap<>();

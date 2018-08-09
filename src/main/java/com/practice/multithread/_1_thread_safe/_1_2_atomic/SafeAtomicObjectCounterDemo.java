@@ -3,7 +3,7 @@ package com.practice.multithread._1_thread_safe._1_2_atomic;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * @author Luo Bao Ding
+ *
  *
  */
 public class SafeAtomicObjectCounterDemo {

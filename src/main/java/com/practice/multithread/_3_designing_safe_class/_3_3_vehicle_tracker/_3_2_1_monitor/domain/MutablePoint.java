@@ -3,7 +3,7 @@ package com.practice.multithread._3_designing_safe_class._3_3_vehicle_tracker._3
 /**
  * not safe. 可能出现点A(x1,y2),其中y2为另一个点的
  *
- * @author Luo Bao Ding
+ *
  *
  */
 public class MutablePoint {

@@ -1,7 +1,7 @@
 package com.practice.multithread._1_thread_safe._1_3_thread_closure.thread_local.threadLocal_principle;
 
 /**
- * @author Luo Bao Ding
+ *
  */
 public class MyThreadLocalDemo {
     private MyThreadLocal<Integer> integerThreadLocal = new MyThreadLocal<>();

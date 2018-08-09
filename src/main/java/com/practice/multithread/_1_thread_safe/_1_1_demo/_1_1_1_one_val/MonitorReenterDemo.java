@@ -1,7 +1,7 @@
 package com.practice.multithread._1_thread_safe._1_1_demo._1_1_1_one_val;
 
 /**
- * @author Luo Bao Ding
+ *
  *
  */
 public class MonitorReenterDemo {

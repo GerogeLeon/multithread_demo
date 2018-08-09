@@ -7,7 +7,7 @@ package com.practice.multithread._1_thread_safe._1_1_demo._1_1_1_one_val;
  * }
  * </pre>
  *
- * @author Luo Bao Ding
+ *
  */
 public class SynchronizedForJavap {
     public synchronized void hello() {

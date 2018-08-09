@@ -3,7 +3,7 @@ package com.practice.multithread._1_thread_safe._1_3_thread_closure.thread_local
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * @author Luo Bao Ding
+ *
  */
 public class UnsafeContrastForThreadLocal2 {
     private AtomicInteger val=new AtomicInteger(0);

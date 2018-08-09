@@ -3,7 +3,7 @@ package com.practice.multithread._4_infrastructure._4_1_synchronized_container._
 import java.util.Vector;
 
 /**
- * @author Luo Bao Ding
+ *
  *
  */
 public class ProblemInForLoopDemo {

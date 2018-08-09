@@ -5,7 +5,7 @@ import com.practice.multithread._1_thread_safe._1_4_immutable.domain.MutableLast
 /**
  * 加锁防窜改来保证线程安全
  *
- * @author Luo Bao Ding
+ *
  *
  */
 public class SafeMutableDemo {

@@ -1,7 +1,7 @@
 package com.practice.multithread._3_designing_safe_class._3_1_safe_class_design.consistency;
 
 /**
- * @author Luo Bao Ding
+ *
  */
 public class WeakConsistencyPosition {
 

@@ -10,7 +10,7 @@ import java.util.Map;
  *     synchronized+copy
  * </p>
  *局限：吞吐量低，大对象时copy耗时
- * @author Luo Bao Ding
+ *
  */
 public class MonitorVehicleTracker {
     /**

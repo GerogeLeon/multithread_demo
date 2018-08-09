@@ -3,7 +3,7 @@ package com.practice.multithread._1_thread_safe._1_5_question.domain;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * @author Luo Bao Ding
+ *
  *
  */
 public class AtomicSequence {

@@ -4,7 +4,7 @@ import java.util.Vector;
 
 /**
  *
- * @author Luo Bao Ding
+ *
  *
  */
 public class SolvingConcurrentModificationExceptionProblemDemo {

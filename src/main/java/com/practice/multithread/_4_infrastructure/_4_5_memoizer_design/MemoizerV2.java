@@ -6,7 +6,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * 委托并发容器ConcurrentHashMap。设计局限：大量相同key重复计算
- * @author Luo Bao Ding
+ *
  */
 public class MemoizerV2<A, V> implements Computable<A, V> {
     private final Map<A, V> cache = new ConcurrentHashMap<>();

@@ -5,7 +5,7 @@ import com.practice.multithread._1_thread_safe._1_4_immutable.domain.ImmutableLa
 /**
  * 借助volatile不变容器实现无锁化
  *
- * @author Luo Bao Ding
+ *
  */
 public class SafeImmutableDemo {
     private volatile ImmutableLastLeavingPerson lastLeavingPerson;

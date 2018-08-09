@@ -5,7 +5,7 @@ import java.util.Vector;
 /**
  * 组合形式，原来的方法代理（最好实现相同接口）
  *
- * @author Luo Bao Ding
+ *
  *
  */
 public class MyVectorByComposing<T> /*implements List<T>*/ {

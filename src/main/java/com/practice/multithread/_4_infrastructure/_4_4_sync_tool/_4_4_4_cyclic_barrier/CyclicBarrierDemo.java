@@ -7,7 +7,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 /**
  * 产品迭代：每次迭代前端、后端、移动端都完成了才能发布
  *
- * @author Luo Bao Ding
+ *
  */
 public class CyclicBarrierDemo {
 

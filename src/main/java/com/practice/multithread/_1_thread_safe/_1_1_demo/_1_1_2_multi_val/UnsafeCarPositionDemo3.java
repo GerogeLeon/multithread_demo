@@ -11,7 +11,7 @@ import java.util.concurrent.ConcurrentHashMap;
 /**
  * 只锁住了一处：读
  *
- * @author Luo Bao Ding
+ *
  *
  */
 public class UnsafeCarPositionDemo3 {

@@ -3,7 +3,7 @@ package com.practice.multithread._1_thread_safe._1_1_demo._1_1_1_one_val;
 /**
  * synchronized对应的是获取锁的指令，没有去获取锁就不存在被阻塞。
  *
- * @author Luo Bao Ding
+ *
  *
  */
 public class SynchronizedUsageDemo {

@@ -3,7 +3,7 @@ package com.practice.multithread._3_designing_safe_class._3_2_add_method;
 import java.util.Vector;
 
 /**
- * @author Luo Bao Ding
+ *
  */
 public class MyVectorByExtend<T> extends Vector<T> {
 

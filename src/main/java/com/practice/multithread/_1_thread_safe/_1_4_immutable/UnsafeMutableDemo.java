@@ -7,7 +7,7 @@ import com.practice.multithread._1_thread_safe._1_4_immutable.domain.MutableLast
  *
  * 分析：有窜改机会
  *
- * @author Luo Bao Ding
+ *
  */
 public class UnsafeMutableDemo {
     private volatile MutableLastLeavingPerson lastLeavingPerson;

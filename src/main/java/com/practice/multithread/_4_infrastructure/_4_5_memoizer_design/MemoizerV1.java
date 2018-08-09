@@ -6,7 +6,7 @@ import java.util.Map;
 /**
  * 同步整个方法；局限：吞吐量低，不适使高并发
  *
- * @author Luo Bao Ding
+ *
  */
 public class MemoizerV1<A, V> implements Computable<A, V> {
     private final Map<A, V> cache = new HashMap<>();

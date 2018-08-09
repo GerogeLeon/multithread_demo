@@ -10,7 +10,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 /**
  *
- * @author Luo Bao Ding
+ *
  *
  */
 public class SafeCarPositionDemo {
