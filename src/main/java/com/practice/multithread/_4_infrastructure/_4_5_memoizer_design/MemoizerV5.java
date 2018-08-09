@@ -42,14 +42,7 @@ public class MemoizerV5<A, V> implements Computable<A, V> {
         while (true) {
             Future<V> future = cache.get(arg);
             if (future == null) {
-                final Callable<V> eval = new Callable<V>() {
-
-                    @Override
-                    public V call() throws InterruptedException {
-                        return computable.compute(arg);
-                    }
-                };
-                final FutureTask<V> futureTask = new FutureTask<>(eval);
+                final FutureTask<V> futureTask = new FutureTask<>(() -> computable.compute(arg));
                 future = cache.putIfAbsent(arg, futureTask);
                 if (future == null) {
                     future = futureTask;
