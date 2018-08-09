@@ -8,25 +8,67 @@ import java.util.Vector;
  */
 public class SolvingProblemInForLoop {
 
-    public void safe(Vector vector) {
-        synchronized (vector) {
-            for (int i = 0; i < vector.size(); i++) {
-                Object item = vector.get(i);
-                //...
+    public static final int SIZE = 50;
+
+    private void unsafeLoop(Vector vector) {
+        try {
+            synchronized (vector) {
+                for (int i = vector.size() - 1; i >= 0 && vector.size() > 0; i--) {//竞态条件
+                    Thread.sleep(10);
+                    Object item = vector.get(i);
+                    System.out.println(Thread.currentThread().getName()+": item = " + item);
+                }
             }
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    public void demo() {
+        Vector<String> vector = new Vector<>();
+        init(vector);
+
+        Runnable loop = () -> {
+            unsafeLoop(vector);
+        };
+
+        for (int i = 0; i < 5; i++) {
+            new Thread(loop).start();
+        }
+
+        Runnable remove = () -> {
+            remove(vector);
+        };
+
+        for (int i = 0; i < 5; i++) {
+            new Thread(remove).start();
+        }
+
+    }
+
+    private void init(Vector<String> vector) {
+        for (int i = 0; i < SIZE; i++) {
+            vector.add("a" + i);
         }
     }
 
-    /**
-     * lkm:  question: 这两者有何区别： for (Object item : vector) 与 for (int i = 0; i < vector.size(); i++)
-     * =》见 4_1_3
-     */
-    public void contrast(Vector vector) {
-        for (Object item : vector) {
-            //...
+    private void remove(Vector<String> vector) {
+        try {
+            synchronized (vector) {
+                for (int i = 0; i < vector.size(); i++) {
+                    vector.remove(i);
+                    Thread.sleep(1);
+
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
-
+    public static void main(String[] args) {
+        new SolvingProblemInForLoop().demo();
+    }
 
 }
