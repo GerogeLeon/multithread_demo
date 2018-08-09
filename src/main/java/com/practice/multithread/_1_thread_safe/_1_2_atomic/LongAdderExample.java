@@ -10,7 +10,7 @@ import static org.junit.Assert.assertEquals;
 
 
 /**
- *
+ * 累加器。按线程分功存储，取结果时对分散的值累加一次。吞吐量高于AtomicLong
  */
 public class LongAdderExample {
     public static void main(String[] args) {

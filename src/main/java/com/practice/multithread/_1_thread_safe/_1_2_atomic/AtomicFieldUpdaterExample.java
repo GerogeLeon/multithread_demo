@@ -5,6 +5,9 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicIntegerFieldUpdater;
 
+/**
+ * 原子更新器。解决已有的对象中的字段并非原子类的问题
+ */
 public class AtomicFieldUpdaterExample {
     private static class Test {
         volatile int count;
