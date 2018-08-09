@@ -19,15 +19,15 @@ public class MemoizerV3<A, V> implements Computable<A, V> {
 
     @Override
     public V compute(A arg) throws InterruptedException {
-        FutureTask<V> futureResult = cache.get(arg);
+        FutureTask<V> future0 = cache.get(arg);
         V result = null;
-        if (futureResult == null) {
-            futureResult = new FutureTask<>(() -> computable.compute(arg));
-            cache.put(arg, futureResult);
-            futureResult.run();//lkm: 可能重复计算
+        if (future0 == null) {
+            future0 = new FutureTask<>(() -> computable.compute(arg));
+            cache.put(arg, future0);
+            future0.run();//lkm: 可能重复计算
         }
         try {
-            result = futureResult.get();
+            result = future0.get();
         } catch (ExecutionException e) {
             throw new RuntimeException(e);
         }
