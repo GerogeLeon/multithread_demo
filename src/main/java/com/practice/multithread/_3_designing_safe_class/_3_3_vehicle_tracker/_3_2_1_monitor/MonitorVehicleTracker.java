@@ -6,8 +6,11 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
+ * thread-safe <p>
+ *     synchronized+copy
+ * </p>
+ *局限：吞吐量低，大对象时copy耗时
  * @author Luo Bao Ding
- * @since 2018/8/4
  */
 public class MonitorVehicleTracker {
     /**

@@ -7,7 +7,8 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * thread-safe
+ * thread-safe <p>
+ * 各方法没有使用synchronized
  *
  * @author Luo Bao Ding
  */

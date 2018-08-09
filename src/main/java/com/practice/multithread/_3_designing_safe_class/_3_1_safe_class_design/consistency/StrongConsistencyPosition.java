@@ -1,13 +1,15 @@
-package com.practice.multithread._3_designing_safe_class._3_3_vehicle_tracker._3_2_3_monitor_domain.domain;
+package com.practice.multithread._3_designing_safe_class._3_1_safe_class_design.consistency;
 
 /**
+ * 地理坐标x,y
+ *
  * @author Luo Bao Ding
- * @since 2018/8/4
  */
-public class MonitorPoint {
+public class StrongConsistencyPosition {
+
     private int x, y;
 
-    public MonitorPoint(int x, int y) {
+    public StrongConsistencyPosition(int x, int y) {
         this.x = x;
         this.y = y;
     }
