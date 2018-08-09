@@ -6,6 +6,8 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.FutureTask;
 
 /**
+ * 重复计算降低，但仍会有
+ *
  * @author Luo Bao Ding
  */
 public class MemoizerV3<A, V> implements Computable<A, V> {

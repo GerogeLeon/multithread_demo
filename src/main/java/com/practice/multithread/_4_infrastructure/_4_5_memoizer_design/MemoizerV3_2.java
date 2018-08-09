@@ -6,6 +6,8 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.FutureTask;
 
 /**
+ * 有设计缺陷，不能降低重复计算
+ *
  * @author Luo Bao Ding
  */
 public class MemoizerV3_2<A, V> implements Computable<A, V> {
@@ -31,10 +33,7 @@ public class MemoizerV3_2<A, V> implements Computable<A, V> {
             }
             try {
                 result = future0.get();
-                /**
-                 * 注：有设计缺陷。
-                 * 仍然会相同arg重复算
-                 */
+
             } catch (ExecutionException e) {
                 cache.remove(arg, future0);
                 throw new RuntimeException(e);

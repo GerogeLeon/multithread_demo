@@ -3,15 +3,15 @@ package com.practice.multithread._4_infrastructure._4_1_synchronized_container._
 import java.util.Vector;
 
 /**
- * 复合操作：
+ * 复合操作：<p>
  * 出现ArrayIndexOutOfBoundsException
- *
+ *</p>
  * @author Luo Bao Ding
  * @since 2018/8/6
  */
 public class SolvingVectorCompoundOptProblemDemo {
 
-    public Object getLast(Vector vector) {
+    private Object getLast(Vector vector) {
         try {
             synchronized (vector) {
                 int lastIndex = vector.size() - 1;
@@ -24,7 +24,7 @@ public class SolvingVectorCompoundOptProblemDemo {
         return null;
     }
 
-    public void removeLast(Vector vector) {
+    private void removeLast(Vector vector) {
         try {
             synchronized (vector) {
                 int lastIndex = vector.size() - 1;

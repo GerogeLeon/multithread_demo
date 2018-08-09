@@ -3,7 +3,7 @@ package com.practice.multithread._4_infrastructure._4_1_synchronized_container._
 import java.util.Vector;
 
 /**
- * 获取vector第一个元素和最后元素的工具类。<p>
+ * 多线程获取vector第一个元素和最后元素。<p>
  *
  * 出现ArrayIndexOutOfBoundsException
  *
@@ -11,7 +11,7 @@ import java.util.Vector;
  */
 public class VectorCompoundOptProblemDemo {
 
-    public Object getLast(Vector vector) {
+    private Object getLast(Vector vector) {
         try {
             int lastIndex = vector.size() - 1;
             Thread.sleep(10);
@@ -23,7 +23,7 @@ public class VectorCompoundOptProblemDemo {
         return null;
     }
 
-    public void removeLast(Vector vector) {
+    private void removeLast(Vector vector) {
         try {
             int lastIndex = vector.size() - 1;
             Thread.sleep(10);
@@ -45,18 +45,18 @@ public class VectorCompoundOptProblemDemo {
     }
 
     private void runRemoveLast(Vector<String> vector) {
-        Runnable removeLastRunnable = () -> removeLast(vector);
+        Runnable runnable = () -> removeLast(vector);
 
         for (int i = 0; i <10; i++) {
-            new Thread(removeLastRunnable).start();
+            new Thread(runnable).start();
         }
     }
 
     private void runGetLast(Vector<String> vector) {
-        Runnable getLastRunnable = () -> getLast(vector);
+        Runnable runnable = () -> getLast(vector);
 
         for (int i = 0; i <10; i++) {
-            new Thread(getLastRunnable).start();
+            new Thread(runnable).start();
         }
     }
 
