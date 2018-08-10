@@ -1,5 +1,5 @@
-* 分享
-https://github.com/eugenp/tutorials/tree/master/core-java-concurrency
+## 讲解方式
+- 先抛结论，然后验证
 
 ## PPT设计指导
 * 简单内容一个案例带过
@@ -31,4 +31,7 @@ ctrl + wheel down: next bookmark
 
 C:\Documents\分享
 
+## 资料
+* 别人写的example
+https://github.com/eugenp/tutorials/tree/master/core-java-concurrency
 

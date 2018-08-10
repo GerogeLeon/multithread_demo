@@ -1,5 +1,6 @@
 package com.practice.multithread._4_infrastructure._4_1_synchronized_container._4_1_1_compound_operation;
 
+import java.util.List;
 import java.util.Vector;
 
 /**
@@ -11,7 +12,7 @@ import java.util.Vector;
  */
 public class VectorCompoundOptProblemDemo {
 
-    private Object getLast(Vector vector) {
+    private Object getLast(List vector) {
         try {
             int lastIndex = vector.size() - 1;
             Thread.sleep(10);
@@ -23,7 +24,7 @@ public class VectorCompoundOptProblemDemo {
         return null;
     }
 
-    private void removeLast(Vector vector) {
+    private void removeLast(List vector) {
         try {
             int lastIndex = vector.size() - 1;
             Thread.sleep(10);
@@ -35,7 +36,7 @@ public class VectorCompoundOptProblemDemo {
     }
 
     public void demo() {
-        Vector<String> vector = new Vector<>();
+        List<String> vector = new Vector<>();
         init(vector);
 
         runGetLast(vector);
@@ -44,7 +45,7 @@ public class VectorCompoundOptProblemDemo {
 
     }
 
-    private void runRemoveLast(Vector<String> vector) {
+    private void runRemoveLast(List<String> vector) {
         Runnable runnable = () -> removeLast(vector);
 
         for (int i = 0; i <10; i++) {
@@ -52,7 +53,7 @@ public class VectorCompoundOptProblemDemo {
         }
     }
 
-    private void runGetLast(Vector<String> vector) {
+    private void runGetLast(List<String> vector) {
         Runnable runnable = () -> getLast(vector);
 
         for (int i = 0; i <10; i++) {
@@ -60,7 +61,7 @@ public class VectorCompoundOptProblemDemo {
         }
     }
 
-    private void init(Vector<String> vector) {
+    private void init(List<String> vector) {
         for (int i = 0; i < 100; i++) {
             vector.add("a" + i);
         }
