@@ -17,6 +17,10 @@
     Alt+F9 聚集屏幕笔软件  
   Pointofix自带快捷键： 
     F9 新建画布
+    Alt+S 画笔  
+    ctrl+backspace 撤销  
+    ctrl+del 清除  
+    右击：看到所有快捷键
 * intellij bookmark navigation:
 ctrl + wheel up: previous bookmark  
 ctrl + wheel down: next bookmark
