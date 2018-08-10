@@ -12,11 +12,11 @@
 
 ## 工具准备
 * 电脑屏幕笔Pointofix： <C:\PortableTools\Pointofix\Pointofix.exe>  
-  AutoHotKey定制好快捷键：  
+  - AutoHotKey定制好快捷键：  
     Ctrl+F9 启动程序  
     Alt+F9 聚集屏幕笔软件  
-  Pointofix自带快捷键： 
-    F9 新建画布
+  - Pointofix自带快捷键：   
+    F9 新建画布  
     Alt+S 画笔  
     ctrl+backspace 撤销  
     ctrl+del 清除  
