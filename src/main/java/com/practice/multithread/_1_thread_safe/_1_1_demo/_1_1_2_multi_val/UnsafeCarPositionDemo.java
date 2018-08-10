@@ -6,6 +6,7 @@ import java.util.Map;
 import java.util.Random;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.function.Function;
 
 
 /**
@@ -24,13 +25,7 @@ public class UnsafeCarPositionDemo {
                 for (int i = 0; i < 10; i++) {
                     int posVal = random.nextInt(100);
                     String id = "id" + i;
-
-                    UnsafeCarPosition carPosition = locations.get(id);
-                    if (carPosition == null) {
-                        carPosition = new UnsafeCarPosition();
-                        locations.put(id, carPosition);
-                    }
-
+                    UnsafeCarPosition carPosition = locations.computeIfAbsent(id, s -> new UnsafeCarPosition());
                     //每次设置相同的值，预期始终x==y
                     carPosition.setX(posVal);
                     Thread.sleep(1);

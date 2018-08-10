@@ -26,11 +26,8 @@ public class UnsafeCarPositionDemo2 {
                 for (int i = 0; i < 10; i++) {
                     int posVal = random.nextInt(100);
                     String id = "id" + i;
-                    UnsafeCarPosition carPosition = locations.get(id);
-                    if (carPosition == null) {
-                        carPosition = new UnsafeCarPosition();
-                        locations.put(id, carPosition);
-                    }
+                    UnsafeCarPosition carPosition = locations.computeIfAbsent(id, s -> new UnsafeCarPosition());
+
                     synchronized (carPosition) {
                         carPosition.setX(posVal);
                         Thread.sleep(1);
