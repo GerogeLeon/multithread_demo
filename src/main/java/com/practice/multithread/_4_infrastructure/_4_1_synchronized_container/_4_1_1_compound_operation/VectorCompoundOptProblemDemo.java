@@ -1,14 +1,14 @@
 package com.practice.multithread._4_infrastructure._4_1_synchronized_container._4_1_1_compound_operation;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Vector;
 
 /**
  * 多线程获取vector第一个元素和最后元素。<p>
- *
+ * <p>
  * 出现ArrayIndexOutOfBoundsException
- *
- *
  */
 public class VectorCompoundOptProblemDemo {
 
@@ -37,6 +37,7 @@ public class VectorCompoundOptProblemDemo {
 
     public void demo() {
         List<String> vector = new Vector<>();
+//        List<String> vector = Collections.synchronizedList(new ArrayList<>());
         init(vector);
 
         runGetLast(vector);
@@ -48,7 +49,7 @@ public class VectorCompoundOptProblemDemo {
     private void runRemoveLast(List<String> vector) {
         Runnable runnable = () -> removeLast(vector);
 
-        for (int i = 0; i <10; i++) {
+        for (int i = 0; i < 10; i++) {
             new Thread(runnable).start();
         }
     }
@@ -56,7 +57,7 @@ public class VectorCompoundOptProblemDemo {
     private void runGetLast(List<String> vector) {
         Runnable runnable = () -> getLast(vector);
 
-        for (int i = 0; i <10; i++) {
+        for (int i = 0; i < 10; i++) {
             new Thread(runnable).start();
         }
     }
